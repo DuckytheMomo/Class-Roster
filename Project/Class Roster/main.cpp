@@ -20,7 +20,7 @@ int main() {
 		"A2,Suzan,Erickson,rickson_1990@gmailcom,19,50,30,40,NETWORK",
 		"A3,Jack,Napoli,The_lawyer99yahoo.com,19,20,40,33,SOFTWARE",
 		"A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
-		"A5,Ducky,Momo,DuckyMomo@momo.net,18,30,50,25,SOFTWARE", //Requirement A: Modify the ìstudentData Tableî to include your personal information as the last item.
+		"A5,Ducky,Momo,DuckyMomo@momo.net,18,30,50,25,SOFTWARE", //Requirement A: Modify the ‚ÄústudentData Table‚Äù to include your personal information as the last item.
 	};
 
 	Roster* classRoster = new Roster(numStudents); //Making the repository. Requirement F2: Create an instance of the Roster class called classRoster.
