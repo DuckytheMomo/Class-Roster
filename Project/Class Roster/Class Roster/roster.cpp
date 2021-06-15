@@ -1,17 +1,9 @@
-//Requirement filled: B. Create a C++ project in your integrated development environment (IDE) with the following file: roster.cpp
 #include <iostream>
 #include <string>
 #include <sstream>
 #include "roster.h"
 //Include all libraries needed.
 
-/*
-Following Requirements E1 & E2:
-1.  Create an array of pointers, classRosterArray, to hold the data provided in the ìstudentData Table.î
-2.  Create a student object for each student in the data table and populate classRosterArray.
-	a.  Parse each set of data identified in the ìstudentData Table.î
-	b.  Add each student object to classRosterArray.
-*/
 
 Roster::Roster() //The empty constructor sets to default values
 {
@@ -38,12 +30,9 @@ void Roster::add(string ID, string fName, string lName, string emailAdd, int sAg
 
 	classRosterArray[lastIndex] = new Student(ID, fName, lName, emailAdd, sAge, classDaysArray, degreeType);
 
-	/*else if (degreeType == Degree::NETWORK) classRosterArray[lastIndex] = new Student(ID, fName, lName, emailAdd, sAge, classDaysArray, degreeType);
-
-	else classRosterArray[lastIndex] = new Student(ID, fName, lName, emailAdd, sAge, classDaysArray, degreeType); */
 };
 
-void Roster::parseAdd(string datarow) // Create a student object for each student in the data table and populate classRosterArray. a.  Parse each set of data identified in the ìstudentData Table.î
+void Roster::parseAdd(string datarow) // Create a student object for each student in the data table and populate classRosterArray. a.  Parse each set of data identified in the ‚ÄústudentData Table.‚Äù
 //b.  Add each student object to classRosterArray.
 {
 	if (lastIndex < capacity) {
@@ -112,7 +101,7 @@ void Roster::printAll()
 	for (int i = 0; i <= this->lastIndex; i++) (this->classRosterArray)[i]->print();
 }
 
-void Roster::remove(string ID) /*Requirement E3b: Removes students from the roster by student ID. 
+void Roster::remove(string ID) /*Removes students from the roster by student ID. 
 If the student ID does not exist, the function prints an error message indicating that the student was not found.*/
 {
 	bool foundID = false;
@@ -131,8 +120,7 @@ If the student ID does not exist, the function prints an error message indicatin
 	}
 }
 
-void Roster::printAverageDaysInCourse(string ID) /* Requirement E3b: public void printAverageDaysInCourse(string studentID)  
-that correctly prints a studentís average number of days in the three courses. The student is identified by the studentID parameter. */
+void Roster::printAverageDaysInCourse(string ID) 
 {
 	bool foundID = false;
 	for (int i = 0; i <= lastIndex; i++) {
